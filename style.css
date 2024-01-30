@@ -1,0 +1,232 @@
+:root {
+ --bg-color: #0d0e13;
+ --txt-color: white;
+ --font-size: 1rem;
+ --second-table-bg-color: #1f2b37;
+ --table-internal-border: #5c697a;
+ --options-color: #03bb6d;
+ --icon-true-color: #22fe7e;
+ --icon-false-color: red;
+}
+
+ 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    font-size: var(--font-size);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.1rem;
+    margin-bottom: 2rem;
+}
+
+caption > span {
+    display: inline-block;
+    font-size: 2rem;
+    transform: rotate(-10deg);
+    color: red;
+}
+
+th, td {
+    padding: 0.5rem 0.5rem;
+    vertical-align: center;
+    width: 8rem;
+    height: 3rem;
+}
+
+th, tbody tr:nth-child(4n+3){
+    background-color: var(--second-table-bg-color);
+}
+
+tr {
+    cursor: pointer;
+}
+
+tr td:first-child {
+    text-align: left;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+th {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--table-internal-border);
+}
+
+/* .true::before {
+    content: "\02714\0FE0";
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem;
+} */
+
+/* .icon {
+    display: inline-flex;
+    font-family: auto;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    justify-content: center;
+}
+
+.true{
+    background-color:#03bb6d;
+}
+
+.false {
+    background-color:#e13c32;
+} */
+
+.material-symbols-outlined {
+    font-size: 3rem;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 36
+  }
+  
+  .icon-false {
+      color: var(--icon-false-color);
+  }
+  .icon-true {
+      color: var(--icon-true-color);
+  }
+
+
+tr td:not(:last-child), tr th:not(:last-child) {
+    border-right: 2px solid var(--table-internal-border);
+}
+
+
+/******/
+
+iframe {
+    width: 100%;
+    height: auto;
+    border: none;
+}
+
+tr[id^="example-row"] {
+    opacity: 0;
+    visibility: collapse;
+    transition: 1s;
+}
+
+tr[id^="example-row"] td {
+    padding: 0;
+}
+
+details {
+    position: relative;
+    background-color: #1f2b37;
+    padding: 1rem 0;
+}
+
+summary {
+    color:darkorange;
+    padding-left: 1rem;
+}
+
+
+details img {
+    max-width: 100%;
+    padding-top: 1rem;
+}
+
+#code-options {
+    margin: 2rem auto;
+}
+
+#code-options > select {
+    background-color: var(--second-table-bg-color);
+    color:var(--options-color);
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+}
+
+#code-options > label {
+    color: var(--options-color);
+}
+
+#code-options > select:focus {
+    outline: none;
+}
+
+#code-options > select  option {
+    margin: 1rem;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: fixed;
+    width: clamp(200px, 85%, 530px);
+    border:1px solid #03bb6d;
+    border-radius: 1rem;
+    background-color:#1f2b37;
+    padding: 1rem;
+    top: 1rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: none;
+    line-height: 1.5rem;
+    
+}
+
+.tooltip mark {
+    padding: 0.1rem;
+}
+
+td:hover .tooltip {
+    visibility: visible;
+}
+
+.copy {
+    padding: 1rem 0;
+    text-align: right;
+    font-size: 0.85rem;
+    color: lightgray;
+    font-family: monospace;
+}
+.copy span{
+    color:#22fe7e;
+}
+
+.copy a {
+    text-decoration: none;
+    color: lightgray;
+    font-weight: bold;
+}
+
+.copy a:hover {
+    text-decoration: underline;
+    color: whitesmoke;
+}
