@@ -10,7 +10,7 @@ Project help students understand using VAR, LET, CONST in JavaScript.
 - jokes and fun
 
 ## Using
-Use [this page](https://github.com) on GitHub Pages
+Use [this page](https://in-tech-gration-cohort-0x02.github.io/vartable-js/) on GitHub Pages
 
 ## Licences
 Free for use
